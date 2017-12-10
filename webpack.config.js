@@ -19,8 +19,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/, // 所有css文件                
-                loader: 'style-loader!css-loader', // css文件先使用css-loader装载至js中，再渲染到DOM
+                test: /\.scss$/, // 所有css文件                
+                loader: 'style-loader!css-loader!sass-loader', // css文件先使用css-loader装载至js中，再渲染到DOM
             }
         ]
     }

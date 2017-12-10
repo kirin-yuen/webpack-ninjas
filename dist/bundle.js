@@ -107,8 +107,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../node_modules/css-loader/index.js!./module-a.css", function() {
-			var newContent = require("!!../node_modules/css-loader/index.js!./module-a.css");
+		module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/lib/loader.js!./module-a.scss", function() {
+			var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/lib/loader.js!./module-a.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -126,7 +126,7 @@ exports = module.exports = __webpack_require__(4)(undefined);
 
 
 // module
-exports.push([module.i, "#box {\r\n    padding: 20px;\r\n    background-color: maroon;\r\n}", ""]);
+exports.push([module.i, "#box {\n  padding: 20px;\n  background-color: red;\n  color: white; }\n", ""]);
 
 // exports
 

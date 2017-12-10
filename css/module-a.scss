@@ -1,5 +1,7 @@
+$bg: red;
+
 #box {
     padding: 20px;
-    background-color: maroon;
+    background-color: $bg;
     color:white;
 }
