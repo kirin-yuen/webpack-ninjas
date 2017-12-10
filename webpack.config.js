@@ -11,12 +11,17 @@ module.exports = {
     },
     module: {
         loaders: [{
-            test: /\.js$/, // 所有js文件
-            exclude: /(node_modules)/, // 排除node_modules里的js
-            loader: 'babel-loader',
-            query: {
-                presets: ['es2015'] //使用es2015设置
+                test: /\.js$/, // 所有js文件
+                exclude: /(node_modules)/, // 排除node_modules里的js
+                loader: 'babel-loader',
+                query: {
+                    presets: ['es2015'] //使用es2015设置
+                }
+            },
+            {
+                test: /\.css$/, // 所有css文件                
+                loader: 'style-loader!css-loader', // css文件先使用css-loader装载至js中，再渲染到DOM
             }
-        }]
+        ]
     }
 };
